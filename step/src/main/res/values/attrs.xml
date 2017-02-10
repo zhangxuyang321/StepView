@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+
+    <declare-styleable name="flowview">
+        <attr name="bg_radius" format="dimension" />
+        <attr name="pro_radius" format="dimension" />
+        <attr name="line_bg_width" format="dimension" />
+        <attr name="line_pro_width" format="dimension" />
+        <attr name="text_padding" format="dimension" />
+        <attr name="time_padding" format="dimension" />
+        <attr name="circle_count" format="integer" />
+        <attr name="textsize" format="dimension" />
+        <attr name="circle_pro" format="integer" />
+    </declare-styleable>
+</resources>
