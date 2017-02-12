@@ -25,7 +25,9 @@ public class FlowViewHorizontal extends View {
     private float stopX;
     private float bgCenterY;
     private int lineBgWidth;
+    private int bgColor;
     private int lineProWidth;
+    private int proColor;
     private int textPadding;
     private int timePadding;
     private int circleCount;
@@ -50,7 +52,9 @@ public class FlowViewHorizontal extends View {
         bgRadius = ta.getDimension(R.styleable.flowview_horizontal_bg_radius, 10);
         proRadius = ta.getDimension(R.styleable.flowview_horizontal_pro_radius, 8);
         lineBgWidth = (int) ta.getDimension(R.styleable.flowview_horizontal_line_bg_width, 3f);
+        bgColor = ta.getColor(R.styleable.flowview_horizontal_bg_color, Color.parseColor("#cdcbcc"));
         lineProWidth = (int) ta.getDimension(R.styleable.flowview_horizontal_line_pro_width, 2f);
+        proColor = ta.getColor(R.styleable.flowview_horizontal_pro_color, Color.parseColor("#029dd5"));
         textPadding = (int) ta.getDimension(R.styleable.flowview_horizontal_text_padding, 20);
         timePadding = (int) ta.getDimension(R.styleable.flowview_horizontal_time_padding, 30);
         circleCount = ta.getInt(R.styleable.flowview_horizontal_circle_count, 5);
@@ -64,7 +68,7 @@ public class FlowViewHorizontal extends View {
         bgPaint = new Paint();
         bgPaint.setAntiAlias(true);
         bgPaint.setStyle(Paint.Style.FILL);
-        bgPaint.setColor(Color.parseColor("#cdcbcc"));
+        bgPaint.setColor(bgColor);
         bgPaint.setStrokeWidth(lineBgWidth);
         bgPaint.setTextSize(textSize);
         bgPaint.setTextAlign(Paint.Align.CENTER);
@@ -72,7 +76,7 @@ public class FlowViewHorizontal extends View {
         proPaint = new Paint();
         proPaint.setAntiAlias(true);
         proPaint.setStyle(Paint.Style.FILL);
-        proPaint.setColor(Color.parseColor("#029dd5"));
+        proPaint.setColor(proColor);
         proPaint.setStrokeWidth(lineProWidth);
         proPaint.setTextSize(textSize);
         proPaint.setTextAlign(Paint.Align.CENTER);
@@ -127,14 +131,14 @@ public class FlowViewHorizontal extends View {
     }
 
     private void setPaintColor(int i) {
-        if (titles==null || map == null) return;
+        if (titles == null || map == null) return;
         String title = titles[i];
         for (Map.Entry<String, String> entry : map.entrySet()) {
             if (title.contains(entry.getKey())) {
                 String value = entry.getValue();
                 proPaint.setColor(Color.parseColor(value));
             } else {
-                proPaint.setColor(Color.parseColor("#029dd5"));
+                proPaint.setColor(proColor);
             }
         }
     }

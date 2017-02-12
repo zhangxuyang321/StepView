@@ -26,7 +26,9 @@ public class FlowViewVertical extends View {
     private float bgRadius;
     private float proRadius;
     private int lineBgWidth;
+    private int bgColor;
     private int lineProWidth;
+    private int proColor;
     private int interval;
     private int bgPositionX;
     private int maxStep;
@@ -57,7 +59,9 @@ public class FlowViewVertical extends View {
         bgRadius = ta.getDimension(R.styleable.flowview_vertical_bg_radius, 10);
         proRadius = ta.getDimension(R.styleable.flowview_vertical_pro_radius, 8);
         lineBgWidth = (int) ta.getDimension(R.styleable.flowview_vertical_line_bg_width, 3f);
+        bgColor = ta.getColor(R.styleable.flowview_vertical_bg_color, Color.parseColor("#cdcbcc"));
         lineProWidth = (int) ta.getDimension(R.styleable.flowview_vertical_line_pro_width, 2f);
+        proColor = ta.getColor(R.styleable.flowview_vertical_pro_color, Color.parseColor("#029dd5"));
         interval = (int) ta.getDimension(R.styleable.flowview_vertical_interval, 140);
         maxStep = ta.getInt(R.styleable.flowview_vertical_maxStep, 5);
         proStep = ta.getInt(R.styleable.flowview_vertical_proStep, 3);
@@ -66,6 +70,7 @@ public class FlowViewVertical extends View {
         textMoveTop = (int) ta.getDimension(R.styleable.flowview_vertical_textMoveTop, 10);
         timeMoveTop = (int) ta.getDimension(R.styleable.flowview_vertical_timeMoveTop, 8);
         textsize = (int) ta.getDimension(R.styleable.flowview_vertical_textsize, 17);
+        ta.recycle();
         init();
     }
 
@@ -73,13 +78,13 @@ public class FlowViewVertical extends View {
         bgPaint = new Paint();
         bgPaint.setAntiAlias(true);
         bgPaint.setStyle(Paint.Style.FILL);
-        bgPaint.setColor(Color.parseColor("#cdcbcc"));
+        bgPaint.setColor(bgColor);
         bgPaint.setStrokeWidth(lineBgWidth);
 
         proPaint = new Paint();
         proPaint.setAntiAlias(true);
         proPaint.setStyle(Paint.Style.FILL);
-        proPaint.setColor(Color.parseColor("#029dd5"));
+        proPaint.setColor(proColor);
         proPaint.setStrokeWidth(lineProWidth);
 
         textPaint = new TextPaint();
@@ -147,9 +152,9 @@ public class FlowViewVertical extends View {
 
     private void setPaintColor(int i) {
         if (i < proStep) {
-            textPaint.setColor(Color.parseColor("#029dd5"));
+            textPaint.setColor(proColor);
         } else {
-            textPaint.setColor(Color.parseColor("#cdcbcc"));
+            textPaint.setColor(bgColor);
         }
         if (titles == null || map == null) return;
         String title = titles[i];
@@ -157,9 +162,9 @@ public class FlowViewVertical extends View {
             if (title.contains(entry.getKey())) {
                 String value = entry.getValue();
                 proPaint.setColor(Color.parseColor(value));
-                textPaint.setColor(Color.parseColor("value"));
+                textPaint.setColor(Color.parseColor(value));
             } else {
-                proPaint.setColor(Color.parseColor("#029dd5"));
+                proPaint.setColor(proColor);
             }
         }
     }

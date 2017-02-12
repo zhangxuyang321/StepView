@@ -9,7 +9,9 @@
         <attr name="bg_radius" format="dimension" />
         <attr name="pro_radius" format="dimension" />
         <attr name="line_bg_width" format="dimension" />
+        <attr name="bg_color" format="color" />
         <attr name="line_pro_width" format="dimension" />
+        <attr name="pro_color" format="color" />
         <attr name="text_padding" format="dimension" />
         <attr name="time_padding" format="dimension" />
         <attr name="circle_count" format="integer" />
@@ -21,7 +23,9 @@
         <attr name="bg_radius" format="dimension" />
         <attr name="pro_radius" format="dimension" />
         <attr name="line_bg_width" format="dimension" />
+        <attr name="bg_color" format="color" />
         <attr name="line_pro_width" format="dimension" />
+        <attr name="pro_color" format="color" />
         <attr name="interval" format="dimension" />
         <attr name="bgPositionX" format="dimension" />
         <attr name="maxStep" format="integer" />
