@@ -46,16 +46,16 @@ public class FlowViewHorizontal extends View {
 
     public FlowViewHorizontal(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.flowview);
-        bgRadius = ta.getDimension(R.styleable.flowview_bg_radius, 10);
-        proRadius = ta.getDimension(R.styleable.flowview_pro_radius, 8);
-        lineBgWidth = (int) ta.getDimension(R.styleable.flowview_line_bg_width, 3f);
-        lineProWidth = (int) ta.getDimension(R.styleable.flowview_line_pro_width, 2f);
-        textPadding = (int) ta.getDimension(R.styleable.flowview_text_padding, 20);
-        timePadding = (int) ta.getDimension(R.styleable.flowview_time_padding, 30);
-        circleCount = ta.getInt(R.styleable.flowview_circle_count, 5);
-        textSize = (int) ta.getDimension(R.styleable.flowview_textsize, 20);
-        circlePro = ta.getInt(R.styleable.flowview_circle_pro, 1);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.flowview_horizontal);
+        bgRadius = ta.getDimension(R.styleable.flowview_horizontal_bg_radius, 10);
+        proRadius = ta.getDimension(R.styleable.flowview_horizontal_pro_radius, 8);
+        lineBgWidth = (int) ta.getDimension(R.styleable.flowview_horizontal_line_bg_width, 3f);
+        lineProWidth = (int) ta.getDimension(R.styleable.flowview_horizontal_line_pro_width, 2f);
+        textPadding = (int) ta.getDimension(R.styleable.flowview_horizontal_text_padding, 20);
+        timePadding = (int) ta.getDimension(R.styleable.flowview_horizontal_time_padding, 30);
+        circleCount = ta.getInt(R.styleable.flowview_horizontal_circle_count, 5);
+        textSize = (int) ta.getDimension(R.styleable.flowview_horizontal_textsize, 20);
+        circlePro = ta.getInt(R.styleable.flowview_horizontal_circle_pro, 1);
         ta.recycle();
         init();
     }

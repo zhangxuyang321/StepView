@@ -1,6 +1,7 @@
 package com.xyz.step;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -22,24 +23,24 @@ public class FlowViewVertical extends View {
     private Paint bgPaint;
     private Paint proPaint;
     private TextPaint textPaint;
-    private float bgRadius = 10;
-    private float proRadius = 8;
-    private int lineBgWidth = 5;
-    private int lineProWidth = 3;
-    private int interval = 140;
+    private float bgRadius;
+    private float proRadius;
+    private int lineBgWidth;
+    private int lineProWidth;
+    private int interval;
     private int bgPositionX;
-    private int maxStep = 10;
-    private int proStep = 5;
-    private int textPaddingLeft = 40;
-    private int timePaddingRight = 80;
-    private int textMoveTop = 10;
-    private int timeMoveTop = 7;
+    private int maxStep;
+    private int proStep;
+    private int textPaddingLeft;
+    private int timePaddingRight;
+    private int textMoveTop;
+    private int timeMoveTop;
+    private int textsize;
     private float starY;
     private float stopY;
     private String[] titles;
     private String[] times;
     private int border;
-    private StaticLayout sl;
     private Map<String, String> map;
 
     public FlowViewVertical(Context context) {
@@ -52,6 +53,19 @@ public class FlowViewVertical extends View {
 
     public FlowViewVertical(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.flowview_vertical);
+        bgRadius = ta.getDimension(R.styleable.flowview_vertical_bg_radius, 10);
+        proRadius = ta.getDimension(R.styleable.flowview_vertical_pro_radius, 8);
+        lineBgWidth = (int) ta.getDimension(R.styleable.flowview_vertical_line_bg_width, 3f);
+        lineProWidth = (int) ta.getDimension(R.styleable.flowview_vertical_line_pro_width, 2f);
+        interval = (int) ta.getDimension(R.styleable.flowview_vertical_interval, 140);
+        maxStep = ta.getInt(R.styleable.flowview_vertical_maxStep, 5);
+        proStep = ta.getInt(R.styleable.flowview_vertical_proStep, 3);
+        textPaddingLeft = (int) ta.getDimension(R.styleable.flowview_vertical_textPaddingLeft, 40);
+        timePaddingRight = (int) ta.getDimension(R.styleable.flowview_vertical_timePaddingRight, 80);
+        textMoveTop = (int) ta.getDimension(R.styleable.flowview_vertical_textMoveTop, 10);
+        timeMoveTop = (int) ta.getDimension(R.styleable.flowview_vertical_timeMoveTop, 8);
+        textsize = (int) ta.getDimension(R.styleable.flowview_vertical_textsize, 17);
         init();
     }
 
@@ -69,7 +83,7 @@ public class FlowViewVertical extends View {
         proPaint.setStrokeWidth(lineProWidth);
 
         textPaint = new TextPaint();
-        textPaint.setTextSize(17);
+        textPaint.setTextSize(textsize);
         textPaint.setAntiAlias(true);
     }
 
@@ -108,7 +122,7 @@ public class FlowViewVertical extends View {
             if (null != titles) {
                 canvas.save();
                 canvas.translate(bgPositionX + textPaddingLeft, (stopY - (i * interval) - textMoveTop));
-                sl = new StaticLayout(titles[i], textPaint, border, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
+                StaticLayout sl = new StaticLayout(titles[i], textPaint, border, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
                 sl.draw(canvas);
                 canvas.restore();
             }
@@ -137,7 +151,7 @@ public class FlowViewVertical extends View {
         } else {
             textPaint.setColor(Color.parseColor("#cdcbcc"));
         }
-        if (titles==null || map == null) return;
+        if (titles == null || map == null) return;
         String title = titles[i];
         for (Map.Entry<String, String> entry : map.entrySet()) {
             if (title.contains(entry.getKey())) {
@@ -161,4 +175,11 @@ public class FlowViewVertical extends View {
         this.map = map;
     }
 
+    public void setProgress(int progress, int maxStep, String[] titles, String[] times) {
+        proStep = progress;
+        this.maxStep = maxStep;
+        this.titles = titles;
+        this.times = times;
+        invalidate();
+    }
 }
