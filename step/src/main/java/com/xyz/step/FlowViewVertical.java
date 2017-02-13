@@ -65,7 +65,7 @@ public class FlowViewVertical extends View {
         interval = (int) ta.getDimension(R.styleable.flowview_vertical_v_interval, 140);
         maxStep = ta.getInt(R.styleable.flowview_vertical_v_max_step, 5);
         proStep = ta.getInt(R.styleable.flowview_vertical_v_pro_step, 3);
-        bgPositionX = (int) ta.getDimension(R.styleable.flowview_vertical_v_bgPositionX,200);
+        bgPositionX = (int) ta.getDimension(R.styleable.flowview_vertical_v_bgPositionX, 200);
         textPaddingLeft = (int) ta.getDimension(R.styleable.flowview_vertical_v_textPaddingLeft, 40);
         timePaddingRight = (int) ta.getDimension(R.styleable.flowview_vertical_v_timePaddingRight, 80);
         textMoveTop = (int) ta.getDimension(R.styleable.flowview_vertical_v_textMoveTop, 10);
@@ -107,7 +107,6 @@ public class FlowViewVertical extends View {
         float bottom = stopY + bgRadius + getPaddingBottom();
         border = bgWidth - (bgPositionX + textPaddingLeft);
         setMeasuredDimension(bgWidth, (int) bottom);
-
     }
 
     @Override
@@ -118,7 +117,6 @@ public class FlowViewVertical extends View {
     }
 
     private void drawText(Canvas canvas) {
-
         for (int i = 0; i < maxStep; i++) {
             setPaintColor(i);
             if (null != times && i < proStep)
@@ -131,7 +129,6 @@ public class FlowViewVertical extends View {
                 canvas.restore();
             }
         }
-
     }
 
     private void drawProgress(Canvas canvas) {
@@ -162,6 +159,7 @@ public class FlowViewVertical extends View {
                 String value = entry.getValue();
                 proPaint.setColor(Color.parseColor(value));
                 textPaint.setColor(Color.parseColor(value));
+                return;
             } else {
                 proPaint.setColor(proColor);
             }

@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Step</string>
+    <string-array name="vflow">
+        <item>2017–02-12 09:19:56 您的订单开始处理</item>
+        <item>2017–02-12 09:50:43 您的订单待配货</item>
+        <item>2017–02-12 10:19:52 您的包裹已经出库</item>
+        <item>2017–02-12 10:30:23 包裹正在等待揽收</item>
+        <item>2017–02-13 03:23:51 北京市转运中心 已发出</item>
+        <item>2017–02-12 17:19:14 [北京市]百世快递 MKT-北京翰林腾跃项目收件员已揽件</item>
+        <item>[北京市]快件已到达北京转运中心(异常)</item>
+    </string-array>
+
+
+    <string-array name="hflow">
+        <item>提交</item>
+        <item>接单</item>
+        <item>取件</item>
+        <item>异常</item>
+    </string-array>
+
+    <string-array name="htime">
+        <item>15:20</item>
+        <item>15:20</item>
+        <item>15:54</item>
+        <item>15:54</item>
+    </string-array>
+
 </resources>

@@ -30,9 +30,9 @@ public class FlowViewHorizontal extends View {
     private int proColor;
     private int textPadding;
     private int timePadding;
-    private int circleCount;
+    private int maxStep;
     private int textSize;
-    private int circlePro;
+    private int proStep;
     private int interval;
     private String[] titles = {"提交", "接单", "取件", "配送", "完成"};
     private String[] times;
@@ -57,9 +57,9 @@ public class FlowViewHorizontal extends View {
         proColor = ta.getColor(R.styleable.flowview_horizontal_h_pro_color, Color.parseColor("#029dd5"));
         textPadding = (int) ta.getDimension(R.styleable.flowview_horizontal_h_text_padding, 20);
         timePadding = (int) ta.getDimension(R.styleable.flowview_horizontal_h_time_padding, 30);
-        circleCount = ta.getInt(R.styleable.flowview_horizontal_h_max_step, 5);
+        maxStep = ta.getInt(R.styleable.flowview_horizontal_h_max_step, 5);
         textSize = (int) ta.getDimension(R.styleable.flowview_horizontal_h_textsize, 20);
-        circlePro = ta.getInt(R.styleable.flowview_horizontal_h_pro_step, 1);
+        proStep = ta.getInt(R.styleable.flowview_horizontal_h_pro_step, 1);
         ta.recycle();
         init();
     }
@@ -109,15 +109,15 @@ public class FlowViewHorizontal extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        interval = (int) ((stopX - startX) / (circleCount - 1));
+        interval = (int) ((stopX - startX) / (maxStep - 1));
         drawBg(canvas);
         drawProgress(canvas);
         drawText(canvas);
     }
 
     private void drawText(Canvas canvas) {
-        for (int i = 0; i < circleCount; i++) {
-            if (i < circlePro) {
+        for (int i = 0; i < maxStep; i++) {
+            if (i < proStep) {
                 setPaintColor(i);
                 if (null != titles)
                     canvas.drawText(titles[i], startX + (i * interval), bgCenterY - textPadding, proPaint);
@@ -135,8 +135,8 @@ public class FlowViewHorizontal extends View {
         String title = titles[i];
         for (Map.Entry<String, String> entry : map.entrySet()) {
             if (title.contains(entry.getKey())) {
-                String value = entry.getValue();
-                proPaint.setColor(Color.parseColor(value));
+                proPaint.setColor(Color.parseColor(entry.getValue()));
+                return;
             } else {
                 proPaint.setColor(proColor);
             }
@@ -146,9 +146,9 @@ public class FlowViewHorizontal extends View {
     private void drawProgress(Canvas canvas) {
         int linePro;
         float lastLeft = startX;
-        for (int i = 0; i < circlePro; i++) {
+        for (int i = 0; i < proStep; i++) {
             setPaintColor(i);
-            if (i == 0 || i == circleCount - 1)
+            if (i == 0 || i == maxStep - 1)
                 linePro = interval / 2;
             else
                 linePro = interval;
@@ -160,15 +160,15 @@ public class FlowViewHorizontal extends View {
 
     private void drawBg(Canvas canvas) {
         canvas.drawLine(startX, bgCenterY, stopX, bgCenterY, bgPaint);
-        for (int i = 0; i < circleCount; i++) {
+        for (int i = 0; i < maxStep; i++) {
             canvas.drawCircle(startX + (i * interval), bgCenterY, bgRadius, bgPaint);
         }
     }
 
 
-    public void setProgress(int progress, int circleCount, String[] titles, String[] times) {
-        circlePro = progress;
-        this.circleCount = circleCount;
+    public void setProgress(int progress, int maxStep, String[] titles, String[] times) {
+        proStep = progress;
+        this.maxStep = maxStep;
         this.titles = titles;
         this.times = times;
         invalidate();
