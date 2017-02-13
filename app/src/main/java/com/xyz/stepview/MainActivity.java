@@ -2,8 +2,6 @@ package com.xyz.stepview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-
 import com.xyz.step.FlowViewHorizontal;
 import com.xyz.step.FlowViewVertical;
 
