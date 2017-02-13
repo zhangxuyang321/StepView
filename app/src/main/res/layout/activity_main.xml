@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.xyz.step.FlowViewHorizontal
+        android:id="@+id/hflowview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="80dp"
+        android:paddingLeft="30dp" />
 
-        <com.xyz.step.FlowViewVertical
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="50dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="50dp"/>
-    </LinearLayout>
-</ScrollView>
+    <com.xyz.step.FlowViewVertical
+        android:id="@+id/vflowview"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        app:v_bgPositionX="100dp"
+        app:v_interval="65dp"
+        app:v_max_step="7" />
+</LinearLayout>

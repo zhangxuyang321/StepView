@@ -6,34 +6,34 @@
          necessary to support previous API levels. -->
 
     <declare-styleable name="flowview_horizontal">
-        <attr name="bg_radius" format="dimension" />
-        <attr name="pro_radius" format="dimension" />
-        <attr name="line_bg_width" format="dimension" />
-        <attr name="bg_color" format="color" />
-        <attr name="line_pro_width" format="dimension" />
-        <attr name="pro_color" format="color" />
-        <attr name="text_padding" format="dimension" />
-        <attr name="time_padding" format="dimension" />
-        <attr name="circle_count" format="integer" />
-        <attr name="textsize" format="dimension" />
-        <attr name="circle_pro" format="integer" />
+        <attr name="h_bg_radius" format="dimension" />
+        <attr name="h_pro_radius" format="dimension" />
+        <attr name="h_bg_width" format="dimension" />
+        <attr name="h_bg_color" format="color" />
+        <attr name="h_pro_width" format="dimension" />
+        <attr name="h_pro_color" format="color" />
+        <attr name="h_text_padding" format="dimension" />
+        <attr name="h_time_padding" format="dimension" />
+        <attr name="h_max_step" format="integer" />
+        <attr name="h_textsize" format="dimension" />
+        <attr name="h_pro_step" format="integer" />
     </declare-styleable>
 
     <declare-styleable name="flowview_vertical">
-        <attr name="bg_radius" format="dimension" />
-        <attr name="pro_radius" format="dimension" />
-        <attr name="line_bg_width" format="dimension" />
-        <attr name="bg_color" format="color" />
-        <attr name="line_pro_width" format="dimension" />
-        <attr name="pro_color" format="color" />
-        <attr name="interval" format="dimension" />
-        <attr name="bgPositionX" format="dimension" />
-        <attr name="maxStep" format="integer" />
-        <attr name="proStep" format="integer" />
-        <attr name="textPaddingLeft" format="dimension" />
-        <attr name="timePaddingRight" format="dimension" />
-        <attr name="textMoveTop" format="dimension" />
-        <attr name="timeMoveTop" format="dimension" />
-        <attr name="textsize" format="dimension" />
+        <attr name="v_bg_radius" format="dimension" />
+        <attr name="v_pro_radius" format="dimension" />
+        <attr name="v_bg_width" format="dimension" />
+        <attr name="v_bg_color" format="color" />
+        <attr name="v_pro_width" format="dimension" />
+        <attr name="v_pro_color" format="color" />
+        <attr name="v_interval" format="dimension" />
+        <attr name="v_bgPositionX" format="dimension" />
+        <attr name="v_max_step" format="integer" />
+        <attr name="v_pro_step" format="integer" />
+        <attr name="v_textPaddingLeft" format="dimension" />
+        <attr name="v_timePaddingRight" format="dimension" />
+        <attr name="v_textMoveTop" format="dimension" />
+        <attr name="v_timeMoveTop" format="dimension" />
+        <attr name="v_textsize" format="dimension" />
     </declare-styleable>
 </resources>
