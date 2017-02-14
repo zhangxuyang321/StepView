@@ -35,7 +35,7 @@ public class FlowViewHorizontal extends View {
     private int proStep;
     private int interval;
     private String[] titles = {"提交", "接单", "取件", "配送", "完成"};
-    private String[] times={"12:20"};
+    private String[] times = {"12:20"};
     private Map<String, String> map;
 
     public FlowViewHorizontal(Context context) {
@@ -124,8 +124,11 @@ public class FlowViewHorizontal extends View {
                 if (null != times)
                     canvas.drawText(times[i], startX + (i * interval), bgCenterY + timePadding, proPaint);
             } else {
-                if (null != titles)
-                    canvas.drawText(titles[i], startX + (i * interval), bgCenterY - textPadding, bgPaint);
+                if (null != titles) {
+                    String title = titles[i];
+                    if (null == title) continue;
+                    canvas.drawText(title, startX + (i * interval), bgCenterY - textPadding, bgPaint);
+                }
             }
         }
     }

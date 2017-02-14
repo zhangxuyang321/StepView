@@ -15,10 +15,12 @@
         <item>提交</item>
         <item>接单</item>
         <item>取件</item>
+        <item>配送</item>
         <item>异常</item>
     </string-array>
 
-    <string-array name="htime">
+
+    <string-array name="htime5">
         <item>15:20</item>
         <item>15:20</item>
         <item>15:54</item>

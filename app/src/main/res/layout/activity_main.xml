@@ -6,7 +6,52 @@
     android:orientation="vertical">
 
     <com.xyz.step.FlowViewHorizontal
-        android:id="@+id/hflowview"
+        android:id="@+id/hflowview1"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="30dp"
+        app:h_bg_radius="6dp"
+        app:h_bg_width='4dp'
+        app:h_max_step="2"
+        app:h_pro_radius='4dp'
+        app:h_pro_width="2dp"
+        app:h_text_padding='10dp'
+        app:h_textsize='10dp'
+        app:h_time_padding='17dp' />
+
+    <com.xyz.step.FlowViewHorizontal
+        android:id="@+id/hflowview2"
+        android:layout_width="280dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="30dp"
+        app:h_bg_radius="6dp"
+        app:h_bg_width='4dp'
+        app:h_max_step="3"
+        app:h_pro_color="#56A000"
+        app:h_pro_radius='4dp'
+        app:h_pro_width="2dp"
+        app:h_text_padding='10dp'
+        app:h_textsize='10dp'
+        app:h_time_padding='17dp' />
+
+    <com.xyz.step.FlowViewHorizontal
+        android:id="@+id/hflowview3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="30dp"
+        app:h_bg_radius="6dp"
+        app:h_bg_width='4dp'
+        app:h_pro_color="#B573EF"
+        app:h_pro_radius='4dp'
+        app:h_pro_width="2dp"
+        app:h_text_padding='10dp'
+        app:h_textsize='10dp'
+        app:h_time_padding='17dp' />
+
+    <com.xyz.step.FlowViewHorizontal
+        android:id="@+id/hflowview4"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:paddingLeft="30dp"
@@ -18,20 +63,39 @@
         app:h_textsize='10dp'
         app:h_time_padding='17dp' />
 
-    <com.xyz.step.FlowViewVertical
-        android:id="@+id/vflowview"
+    <com.xyz.step.FlowViewHorizontal
+        android:id="@+id/hflowview5"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:paddingBottom="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        app:v_bgPositionX="40dp"
-        app:v_bg_radius="6dp"
-        app:v_bg_width="4dp"
-        app:v_interval="65dp"
-        app:v_max_step="7"
-        app:v_pro_radius='4dp'
-        app:v_pro_width="2dp"
-        app:v_textMoveTop="7dp"
-        app:v_textsize="14dp" />
+        android:layout_height="75dp"
+        android:paddingLeft="30dp"
+        app:h_bg_radius="6dp"
+        app:h_bg_width='4dp'
+        app:h_pro_radius='4dp'
+        app:h_pro_width="2dp"
+        app:h_text_padding='10dp'
+        app:h_textsize='10dp'
+        app:h_time_padding='17dp' />
+
+    <com.xyz.step.FlowViewHorizontal
+        android:id="@+id/hflowview6"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="30dp"
+        app:h_bg_color="#000"
+        app:h_bg_radius="6dp"
+        app:h_bg_width='4dp'
+        app:h_pro_color="#808080"
+        app:h_pro_radius='4dp'
+        app:h_pro_width="2dp"
+        app:h_text_padding='10dp'
+        app:h_textsize='10dp'
+        app:h_time_padding='17dp' />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="竖向" />
+
 </LinearLayout>
