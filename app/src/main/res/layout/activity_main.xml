@@ -9,10 +9,14 @@
         android:id="@+id/hflowview"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        app:h_bg_width='4dp'
+        android:paddingLeft="30dp"
         app:h_bg_radius="6dp"
+        app:h_bg_width='4dp'
+        app:h_pro_radius='4dp'
         app:h_pro_width="2dp"
-        android:paddingLeft="30dp" />
+        app:h_text_padding='10dp'
+        app:h_textsize='10dp'
+        app:h_time_padding='17dp' />
 
     <com.xyz.step.FlowViewVertical
         android:id="@+id/vflowview"
@@ -22,10 +26,12 @@
         android:paddingRight="10dp"
         android:paddingTop="10dp"
         app:v_bgPositionX="40dp"
-        app:v_textsize="14dp"
-        app:v_bg_width="4dp"
         app:v_bg_radius="6dp"
-        app:v_pro_width="2dp"
+        app:v_bg_width="4dp"
         app:v_interval="65dp"
-        app:v_max_step="7" />
+        app:v_max_step="7"
+        app:v_pro_radius='4dp'
+        app:v_pro_width="2dp"
+        app:v_textMoveTop="7dp"
+        app:v_textsize="14dp" />
 </LinearLayout>

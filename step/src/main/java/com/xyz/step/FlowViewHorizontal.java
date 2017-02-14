@@ -35,7 +35,7 @@ public class FlowViewHorizontal extends View {
     private int proStep;
     private int interval;
     private String[] titles = {"提交", "接单", "取件", "配送", "完成"};
-    private String[] times;
+    private String[] times={"12:20"};
     private Map<String, String> map;
 
     public FlowViewHorizontal(Context context) {
