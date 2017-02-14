@@ -1,7 +1,9 @@
 package com.xyz.stepview;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.xyz.step.FlowViewHorizontal;
 import com.xyz.step.FlowViewVertical;
@@ -20,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         FlowViewHorizontal hFlow5 = (FlowViewHorizontal) findViewById(R.id.hflowview5);
         FlowViewHorizontal hFlow6 = (FlowViewHorizontal) findViewById(R.id.hflowview6);
 
-
         Map<String, String> map = new HashMap<>();
         map.put("异常", "#FF0000");
 
@@ -31,12 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
         hFlow5.setProgress(4, 5, getResources().getStringArray(R.array.htime5), null);
 
-        hFlow6.setProgress(5, 5, getResources().getStringArray(R.array.hflow), getResources().getStringArray(R.array.htime5));
+        hFlow6.setProgress(5, 5, getResources().getStringArray(R.array.hflow6), getResources().getStringArray(R.array.htime5));
         Map<String, String> map1 = new HashMap<>();
         map1.put("接单", "#009999");
         map1.put("取件", "#A65100");
         map1.put("配送", "#620CAC");
         map1.put("完成", "#00733E");
         hFlow6.setKeyColor(map1);
+
+        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, VerticalActivity.class));
+            }
+        });
     }
 }

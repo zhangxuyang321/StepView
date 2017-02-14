@@ -30,8 +30,8 @@
         app:h_bg_width='4dp'
         app:h_max_step="3"
         app:h_pro_color="#56A000"
-        app:h_pro_radius='4dp'
-        app:h_pro_width="2dp"
+        app:h_pro_radius='6dp'
+        app:h_pro_width="5dp"
         app:h_text_padding='10dp'
         app:h_textsize='10dp'
         app:h_time_padding='17dp' />

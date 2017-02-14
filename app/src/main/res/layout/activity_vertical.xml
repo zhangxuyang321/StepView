@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xyz.stepview.VerticalActivity">
+
+    <com.xyz.step.FlowViewVertical
+        android:id="@+id/vflow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        app:v_bgPositionX="40dp"
+        app:v_bg_color="#029dd5"
+        app:v_bg_radius="8dp"
+        app:v_bg_width="4dp"
+        app:v_interval="80dp"
+        app:v_max_step="10"
+        app:v_pro_color="#cdcbcc"
+        app:v_pro_radius="8dp"
+        app:v_pro_step="9"
+        app:v_pro_width="4dp"
+        app:v_textMoveTop="7dp"
+        app:v_textsize="14dp" />
+
+</ScrollView>
