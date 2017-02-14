@@ -8,4 +8,5 @@ StepView是由自己公司开发的软件中抽取出来又做了强化,分为�
 
 [Download Demo](https://github.com/zhangxuyang321/StepView/blob/master/apk/step.apk)
 
-![1](https://github.com/zhangxuyang321/StepView/blob/master/ui/1.png)
+![1](https://github.com/zhangxuyang321/StepView/blob/master/ui/hflow.png)
+![2](https://github.com/zhangxuyang321/StepView/blob/master/ui/vflow.png)
