@@ -5,7 +5,7 @@
          ?android:attr/buttonBarStyle is new as of API 11 so this is
          necessary to support previous API levels. -->
 
-    <declare-styleable name="flowview_horizontal">
+    <declare-styleable name="FlowViewHorizontal">
         <attr name="h_bg_radius" format="dimension" />
         <attr name="h_pro_radius" format="dimension" />
         <attr name="h_bg_width" format="dimension" />
@@ -19,7 +19,7 @@
         <attr name="h_pro_step" format="integer" />
     </declare-styleable>
 
-    <declare-styleable name="flowview_vertical">
+    <declare-styleable name="FlowViewVertical">
         <attr name="v_bg_radius" format="dimension" />
         <attr name="v_pro_radius" format="dimension" />
         <attr name="v_bg_width" format="dimension" />

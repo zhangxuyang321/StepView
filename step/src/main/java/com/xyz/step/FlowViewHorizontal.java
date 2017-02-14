@@ -48,18 +48,18 @@ public class FlowViewHorizontal extends View {
 
     public FlowViewHorizontal(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.flowview_horizontal);
-        bgRadius = ta.getDimension(R.styleable.flowview_horizontal_h_bg_radius, 10);
-        proRadius = ta.getDimension(R.styleable.flowview_horizontal_h_pro_radius, 8);
-        lineBgWidth = (int) ta.getDimension(R.styleable.flowview_horizontal_h_bg_width, 3f);
-        bgColor = ta.getColor(R.styleable.flowview_horizontal_h_bg_color, Color.parseColor("#cdcbcc"));
-        lineProWidth = (int) ta.getDimension(R.styleable.flowview_horizontal_h_pro_width, 2f);
-        proColor = ta.getColor(R.styleable.flowview_horizontal_h_pro_color, Color.parseColor("#029dd5"));
-        textPadding = (int) ta.getDimension(R.styleable.flowview_horizontal_h_text_padding, 20);
-        timePadding = (int) ta.getDimension(R.styleable.flowview_horizontal_h_time_padding, 30);
-        maxStep = ta.getInt(R.styleable.flowview_horizontal_h_max_step, 5);
-        textSize = (int) ta.getDimension(R.styleable.flowview_horizontal_h_textsize, 20);
-        proStep = ta.getInt(R.styleable.flowview_horizontal_h_pro_step, 1);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.FlowViewHorizontal);
+        bgRadius = ta.getDimension(R.styleable.FlowViewHorizontal_h_bg_radius, 10);
+        proRadius = ta.getDimension(R.styleable.FlowViewHorizontal_h_pro_radius, 8);
+        lineBgWidth = (int) ta.getDimension(R.styleable.FlowViewHorizontal_h_bg_width, 3f);
+        bgColor = ta.getColor(R.styleable.FlowViewHorizontal_h_bg_color, Color.parseColor("#cdcbcc"));
+        lineProWidth = (int) ta.getDimension(R.styleable.FlowViewHorizontal_h_pro_width, 2f);
+        proColor = ta.getColor(R.styleable.FlowViewHorizontal_h_pro_color, Color.parseColor("#029dd5"));
+        textPadding = (int) ta.getDimension(R.styleable.FlowViewHorizontal_h_text_padding, 20);
+        timePadding = (int) ta.getDimension(R.styleable.FlowViewHorizontal_h_time_padding, 30);
+        maxStep = ta.getInt(R.styleable.FlowViewHorizontal_h_max_step, 5);
+        textSize = (int) ta.getDimension(R.styleable.FlowViewHorizontal_h_textsize, 20);
+        proStep = ta.getInt(R.styleable.FlowViewHorizontal_h_pro_step, 1);
         ta.recycle();
         init();
     }
