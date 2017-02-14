@@ -160,11 +160,24 @@ compile 'com.xyz.step:step:1.0.4'
 * 最小步骤总和(max_step)>=2且>=已完成步骤(pro_step)
 * 字体大小单位是dp
 * 具体步骤颜色的设置是根据步骤描述(title[])中是否包含所传入map的key值来决定是否更改的,注意是"包含"
+* 只有已完成步骤才可以单独设置颜色,未完成步骤统一使用的是bg_color所得到的颜色
+
+
 ### 横向
+
 * 横向指示器自动计算步骤之间的间隔
 * 横向指示器自动居中显示,当设定paddingLeft后无需再设定paddingRight
 * 横向指示器不可以横向滑动
-* 
+
+
+
+### 竖向
+* 竖向指示器需单独设置步骤之间的间隔(v_interval)
+* 竖向指示器可与ScrollView结合使用,从而达到滑动
+* 竖向指示器并没有使用item复用,如果数据量较大建议使用listview
+* 竖向指示器绘制文字有所不同,也因此导致文字与步骤节点(○)不在一个水平线上,可通过v_textMoveTop与v_timeMoveTop适配
+
+
 ## LICENSE 开源协议
 
     Apache License Version 2.0
