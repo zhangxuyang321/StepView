@@ -16,10 +16,16 @@ StepView是由自己公司开发的软件中抽取出来又做了强化,分为�
 ### Gradle
 
 ```Groovy
-
+compile 'com.xyz.step:step:1.0.4'
 ```
 
 ### Maven
 
 ```xml
+<dependency>
+  <groupId>com.xyz.step</groupId>
+  <artifactId>step</artifactId>
+  <version>1.0.4</version>
+  <type>pom</type>
+</dependency>
 ```
