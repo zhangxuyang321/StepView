@@ -70,7 +70,7 @@ compile 'com.xyz.step:step:1.0.4'
 #### 代码
 
 ```java
-/**
+   /**
      * 进度设置
      * @param progress 已完成到哪部
      * @param maxStep  总步骤
