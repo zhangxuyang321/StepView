@@ -70,7 +70,7 @@ compile 'com.xyz.step:step:1.0.4'
 #### 代码
 
 ```java
-   /**
+    /**
      * 进度设置
      * @param progress 已完成到哪部
      * @param maxStep  总步骤
@@ -78,5 +78,12 @@ compile 'com.xyz.step:step:1.0.4'
      * @param times    完成时间
      */
     public void setProgress(int progress, int maxStep, String[] titles, String[] times);
+    
+    /**
+     * 颜色设置 键值是步骤标题所*包含*的字符
+     * @param map 标题-颜色
+     */
+    public void setKeyColor(Map<String, String> map);
 ```
-    
+
+
