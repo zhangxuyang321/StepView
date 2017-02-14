@@ -33,9 +33,17 @@
 
     <string-array name="htime5">
         <item>15:20</item>
+        <item>15:37</item>
+        <item>15:12</item>
+        <item>15:24</item>
+    </string-array>
+
+    <string-array name="htime6">
         <item>15:20</item>
-        <item>15:54</item>
-        <item>15:54</item>
+        <item>15:37</item>
+        <item>15:12</item>
+        <item>15:24</item>
+        <item>16:23</item>
     </string-array>
 
 </resources>

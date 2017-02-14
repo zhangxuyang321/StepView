@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         hFlow5.setProgress(4, 5, getResources().getStringArray(R.array.htime5), null);
 
-        hFlow6.setProgress(5, 5, getResources().getStringArray(R.array.hflow6), getResources().getStringArray(R.array.htime5));
+        hFlow6.setProgress(5, 5, getResources().getStringArray(R.array.hflow6), getResources().getStringArray(R.array.htime6));
         Map<String, String> map1 = new HashMap<>();
         map1.put("接单", "#009999");
         map1.put("取件", "#A65100");
