@@ -152,3 +152,11 @@ compile 'com.xyz.step:step:1.0.4'
     public void setKeyColor(Map<String, String> map);
     
 ```
+
+## 使用注意
+
+* title[] 和 time[] 传null 的时候则不显示指示器不显示文字与时间
+
+## LICENSE 开源协议
+
+    Apache License Version 2.0
