@@ -119,12 +119,12 @@ public class FlowViewHorizontal extends View {
         for (int i = 0; i < maxStep; i++) {
             if (i < proStep) {
                 setPaintColor(i);
-                if (null != titles)
+                if (null != titles && i<titles.length)
                     canvas.drawText(titles[i], startX + (i * interval), bgCenterY - textPadding, proPaint);
-                if (null != times)
+                if (null != times && i<times.length)
                     canvas.drawText(times[i], startX + (i * interval), bgCenterY + timePadding, proPaint);
             } else {
-                if (null != titles) {
+                if (null != titles && i<titles.length) {
                     String title = titles[i];
                     if (null == title) continue;
                     canvas.drawText(title, startX + (i * interval), bgCenterY - textPadding, bgPaint);
