@@ -10,3 +10,16 @@ StepView是由自己公司开发的软件中抽取出来又做了强化,分为�
 
 ![1](https://github.com/zhangxuyang321/StepView/blob/master/ui/hflow.png)
 ![2](https://github.com/zhangxuyang321/StepView/blob/master/ui/vflow.png)
+
+## 使用
+
+### Gradle
+
+```Groovy
+
+```
+
+### Maven
+
+```xml
+```
