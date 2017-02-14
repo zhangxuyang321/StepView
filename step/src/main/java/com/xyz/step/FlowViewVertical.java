@@ -173,10 +173,18 @@ public class FlowViewVertical extends View {
         }
     }
 
+
     public void setKeyColor(Map<String, String> map) {
         this.map = map;
     }
 
+    /**
+     * 进度设置
+     * @param progress 当前进行到哪一步
+     * @param maxStep  总的步骤
+     * @param titles   文字描述(指示线右侧)
+     * @param times    时间描述(指示线左侧)
+     */
     public void setProgress(int progress, int maxStep, String[] titles, String[] times) {
         proStep = progress;
         this.maxStep = maxStep;

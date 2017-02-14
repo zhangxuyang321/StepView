@@ -168,7 +168,13 @@ public class FlowViewHorizontal extends View {
         }
     }
 
-
+    /**
+     * 进度设置
+     * @param progress 已完成到哪部
+     * @param maxStep  总步骤
+     * @param titles   步骤名称
+     * @param times    完成时间
+     */
     public void setProgress(int progress, int maxStep, String[] titles, String[] times) {
         proStep = progress;
         this.maxStep = maxStep;
@@ -177,6 +183,10 @@ public class FlowViewHorizontal extends View {
         invalidate();
     }
 
+    /**
+     * 颜色设置
+     * @param map 标题-颜色
+     */
     public void setKeyColor(Map<String, String> map) {
         this.map = map;
     }
