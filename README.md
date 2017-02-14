@@ -155,8 +155,16 @@ compile 'com.xyz.step:step:1.0.4'
 
 ## 使用注意
 
+### 全部
 * title[] 和 time[] 传null 的时候则不显示指示器不显示文字与时间
-
+* 最小步骤总和(max_step)>=2且>=已完成步骤(pro_step)
+* 字体大小单位是dp
+* 具体步骤颜色的设置是根据步骤描述(title[])中是否包含所传入map的key值来决定是否更改的,注意是"包含"
+### 横向
+* 横向指示器自动计算步骤之间的间隔
+* 横向指示器自动居中显示,当设定paddingLeft后无需再设定paddingRight
+* 横向指示器不可以横向滑动
+* 
 ## LICENSE 开源协议
 
     Apache License Version 2.0
