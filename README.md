@@ -50,5 +50,33 @@ compile 'com.xyz.step:step:1.0.4'
     h_textsize | 字体大小 | dimension | 10 | 否
     
     
-    
-    
+#### layout
+
+```xml
+<com.xyz.step.FlowViewHorizontal
+        android:id="@+id/hflowview4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="30dp"
+        app:h_bg_radius="6dp"
+        app:h_bg_width='4dp'
+        app:h_pro_radius='4dp'
+        app:h_pro_width="2dp"
+        app:h_text_padding='10dp'
+        app:h_textsize='10dp'
+        app:h_time_padding='17dp' />
+```
+
+#### 代码
+
+```java
+/**
+     * 进度设置
+     * @param progress 已完成到哪部
+     * @param maxStep  总步骤
+     * @param titles   步骤名称
+     * @param times    完成时间
+     */
+    public void setProgress(int progress, int maxStep, String[] titles, String[] times);
+```
+    
