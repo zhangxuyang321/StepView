@@ -105,8 +105,8 @@ compile 'com.xyz.step:step:1.0.4'
     v_max_step | 总步骤(○)的个数 | int | 5 | 否
     v_pro_step | 已完成步骤 | int | 1 | 否
     v_textsize | 字体大小 | dimension | 10 | 否
-    v_textMoveTop | 指示器右侧文字位置上下移动的距离 | 5 | 否
-    v_timeMoveTop | 指示器左侧文字位置上下移动的距离 | 4 | 否
+    v_textMoveTop | 指示器右侧文字位置上下移动的距离 | dimension | 5 | 否
+    v_timeMoveTop | 指示器左侧文字位置上下移动的距离 | dimension | 4 | 否
     
 #### layout
 
