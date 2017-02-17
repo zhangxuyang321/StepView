@@ -3,7 +3,7 @@
 ## 介绍
 
 StepView是由自己公司开发的软件中抽取出来又做了强化,分为横向版和竖向版,颜色大小随意可调,灵活好用!
-[博客链接](https://zhangxuyang321.github.io)
+[(博客链接)](https://zhangxuyang321.github.io)
 
 ## UI
 
