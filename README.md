@@ -1,9 +1,8 @@
 # StepView
 
-## 介绍
+## introduce
 
-StepView是由自己公司开发的软件中抽取出来又做了强化,分为横向版和竖向版,颜色大小随意可调,灵活好用!
-[(博客链接)](https://zhangxuyang321.github.io)
+StepView is extracted from the software developed by my company and do the reinforcement, divided into horizontal and vertical version, color size freely adjustable, flexible to use!
 
 ## UI
 
@@ -12,8 +11,7 @@ StepView是由自己公司开发的软件中抽取出来又做了强化,分为�
 ![1](https://github.com/zhangxuyang321/StepView/blob/master/ui/hflow.png)
 ![2](https://github.com/zhangxuyang321/StepView/blob/master/ui/vflow.png)
 
-
-## 使用
+## How to use
 
 ### Gradle
 
@@ -32,25 +30,24 @@ compile 'com.xyz.step:step:1.0.4'
 </dependency>
 ```
 
-### 横向
+### Horizontal View
 
-#### 属性介绍
+#### Attribute is introduced
 
-属性 | 介绍 | 类型 | 默认 | 是否必须
+Attribute | Describe | Type | Default value | Whether must
     --- | --- | --- | --- | ---
-    h_bg_radius | 背景 ○ 的半径 | dimension | 5 | 否
-    h_pro_radius | 已完成 ○ 的半径 | dimension | 2 | 否 
-    h_bg_width | 背景线的宽度 | dimension | 3 | 否
-    h_bg_color | 背景的颜色 | color | #cdcbcc | 否
-    h_pro_width | 已完成线的宽度 | dimension | 2 | 否
-    h_pro_color | 已完成的颜色 | color | #029dd5 | 否
-    h_text_padding | 步骤描述文字(title)与○的距离 | dimension | 10 | 否
-    h_time_padding | 时间与○的距离 | dimension | 15 | 否
-    h_max_step | 总步骤(○)的个数 | int | 5 | 否
-    h_pro_step | 已完成步骤 | int | 1 | 否
-    h_textsize | 字体大小 | dimension | 10 | 否
-    
-    
+    h_bg_radius | Background circle radius | dimension | 5 | No
+    h_pro_radius | Has completed the radius of the circles | dimension | 2 | No 
+    h_bg_width | Background line width | dimension | 3 | No
+    h_bg_color | Background Color | color | #cdcbcc | No
+    h_pro_width | The width of the line has been completed | dimension | 2 | No
+    h_pro_color | The completed color | color | #029dd5 | No
+    h_text_padding | Text and distance of the circle | dimension | 10 | No
+    h_time_padding | Time and distance of the circle | dimension | 15 | No
+    h_max_step | Total steps | int | 5 | No
+    h_pro_step | Step has been completed | int | 1 | No
+    h_textsize | textsize | dimension | 10 | No
+
 #### layout
 
 ```xml
@@ -68,47 +65,47 @@ compile 'com.xyz.step:step:1.0.4'
         app:h_time_padding='17dp' />
 ```
 
-#### 代码
+#### Code
 
 ```java
     /**
-     * 进度设置
-     * @param progress 已完成到哪部
-     * @param maxStep  总步骤
-     * @param titles   步骤名称
-     * @param times    完成时间
+     * Progress Settings
+     * @param progress  Have completed a few steps
+     * @param maxStep  Total steps
+     * @param titles   	    Step name
+     * @param times      Every step of the completion time
      */
     public void setProgress(int progress, int maxStep, String[] titles, String[] times);
     
     /**
-     * 颜色设置 键值是步骤标题所包含的字符
-     * @param map 标题-颜色
+     * Color Settings
+     * @param map <text,color>
      */
     public void setKeyColor(Map<String, String> map);
 ```
 
-### 竖向
+### Vertical View
 
-#### 属性介绍
+#### Attribute is introduced
 
-属性 | 介绍 | 类型 | 默认 | 是否必须
+Attribute | Describe | Type | Default value | Whether must
     --- | --- | --- | --- | ---
-    v_bg_radius | 背景 ○ 的半径 | dimension | 5 | 否
-    v_pro_radius | 已完成 ○ 的半径 | dimension | 2 | 否 
-    v_bg_width | 背景线的宽度 | dimension | 3 | 否
-    v_bg_color | 背景的颜色 | color | #cdcbcc | 否
-    v_pro_width | 已完成线的宽度 | dimension | 2 | 否
-    v_pro_color | 已完成的颜色 | color | #029dd5 | 否
-    v_interval | ○ 与 ○之间的间距 | dimension | 80 | 否
-    v_bgPositionX | 指示线距view左边缘的距离 | dimension | 100 | 否
-    v_textPaddingLeft | 步骤描述文字与指示线的距离 | dimension | 10 | 否
-    v_timePaddingRight | 时间与指示线的距离 | dimension | 15 | 否
-    v_max_step | 总步骤(○)的个数 | int | 5 | 否
-    v_pro_step | 已完成步骤 | int | 1 | 否
-    v_textsize | 字体大小 | dimension | 10 | 否
-    v_textMoveTop | 指示器右侧文字位置上下移动的距离 | dimension | 5 | 否
-    v_timeMoveTop | 指示器左侧文字位置上下移动的距离 | dimension | 4 | 否
-    
+    v_bg_radius | Background circle radius | dimension | 5 | No
+    v_pro_radius | Has completed the radius of the circle | dimension | 2 | No
+    v_bg_width | Background line width | dimension | 3 | No
+    v_bg_color | Background Color | color | #cdcbcc | No
+    v_pro_width | The width of the line has been completed | dimension | 2 | No
+    v_pro_color |  The completed color | color | #029dd5 | No
+    v_interval | interval | dimension | 80 | No
+    v_bgPositionX | In a horizontal position | dimension | 100 | No
+    v_textPaddingLeft | The distance of text and lines | dimension | 10 | No
+    v_timePaddingRight | The distance of time and lines | dimension | 15 | No
+    v_max_step | Total steps | int | 5 | No
+    v_pro_step | Step has been completed | int | 1 | No
+    v_textsize | Text size | dimension | 10 | No
+    v_textMoveTop | The text on the vertical distance | dimension | 5 | No
+    v_timeMoveTop | The time on the vertical distance | dimension | 4 | No
+
 #### layout
 
 ```xml
@@ -133,50 +130,49 @@ compile 'com.xyz.step:step:1.0.4'
         app:v_textsize="14dp" />
 ```
 
-#### 代码
+#### Code
 
 ``` java
     /**
-     * 进度设置
-     * @param progress 当前进行到哪一步
-     * @param maxStep  总的步骤
-     * @param titles   文字描述(指示线右侧)
-     * @param times    时间描述(指示线左侧)
+     * Progress Settings
+     * @param progress Have completed a few steps
+     * @param maxStep  Total steps
+     * @param titles    Step description
+     * @param times    Time description
      */
     public void setProgress(int progress, int maxStep, String[] titles, String[] times);
     
     
     /**
-     * 颜色设置 键值是步骤标题所包含的字符
-     * @param map 标题-颜色
+     *  Color Settings
+     * @param map <text,color>
      */
     public void setKeyColor(Map<String, String> map);
     
 ```
 
-## 使用注意
+## Use attention
 
-### 全部
-* title[] 和 time[] 传null 的时候则不显示指示器不显示文字与时间
-* 最小步骤总和(max_step)>=2且>=已完成步骤(pro_step)
-* 字体大小单位是dp
-* 具体步骤颜色的设置是根据步骤描述(title[])中是否包含所传入map的key值来决定是否更改的,注意是"包含"
-* 只有已完成步骤才可以单独设置颜色,未完成步骤统一使用的是bg_color所得到的颜色
+###All directions
 
+* When title[] and time[] uploading the null does not show the indicator、words and time.
+  
+* Min steps sum(max_step)>=2 and >= finished steps(pro_step)
+* The unit of the font’s size is dp
+* The color setting of the concrete steps is according to the key from the map whether title[] contain or not to make a decision whether change or not
+* Only finished steps can set color individually, unfinished steps all use the color from bg_color
 
-### 横向
+### Transverse 
+* Lateral indicator counts intervals between steps automatically
+* Lateral indicator is placed in the middle automatically, when you set paddingLeft ,you do not need to set paddingRight
+* Lateral indicator can not slide transversely
 
-* 横向指示器自动计算步骤之间的间隔
-* 横向指示器自动居中显示,当设定paddingLeft后无需再设定paddingRight
-* 横向指示器不可以横向滑动
-
-
-
-### 竖向
-* 竖向指示器需单独设置步骤之间的间隔(v_interval)
-* 竖向指示器可与ScrollView结合使用,从而达到滑动
-* 竖向指示器并没有使用item复用,如果数据量较大建议使用listview
-* 竖向指示器绘制文字有所不同,也因此导致文字与步骤节点(○)不在一个水平线上,可通过v_textMoveTop与v_timeMoveTop适配
+###Vertical
+* Vertical indicator need to set the intervals between steps(v_interval)
+* Vertical indicator can combine with ScrollView to get slide
+* Vertical indicator doesn’t use item reusing, you’d better use listview if the date size is bigger
+* Vertical indicator’s word drawing is different, which leads to words and *
+* steps nodes(O) not in the same horizontal, you can adapt v_textMove Top with v_timeMove Top 
 
 
 ## LICENSE 开源协议
