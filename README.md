@@ -3,7 +3,8 @@
 ## introduce
 
 StepView is extracted from the software developed by my company and do the reinforcement, divided into horizontal and vertical version, color size freely adjustable, flexible to use!
-(中文版在这里)[https://github.com/zhangxuyang321/StepView/blob/master/StepView.md]
+
+[中文版在这里](https://github.com/zhangxuyang321/StepView/blob/master/StepView.md)
 ## UI
 
 [Download Demo](https://github.com/zhangxuyang321/StepView/blob/master/apk/step.apk)
