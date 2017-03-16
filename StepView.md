@@ -36,9 +36,10 @@ compile 'com.xyz.step:step:1.0.4'
 
 #### 属性介绍
 
-属性 | 介绍 | 类型 | 默认 | 是否必须
+    属性 | 介绍 | 类型 | 默认 | 是否必须
+    
     --- | --- | --- | --- | ---
-    h_bg_radius | 背景 ○ 的半径 | dimension | 5 | 否
+    h_bg_radius | 背景 ○ 的半径 | dimension | 5 | 否
     h_pro_radius | 已完成 ○ 的半径 | dimension | 2 | 否 
     h_bg_width | 背景线的宽度 | dimension | 3 | 否
     h_bg_color | 背景的颜色 | color | #cdcbcc | 否
