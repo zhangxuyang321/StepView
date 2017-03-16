@@ -37,17 +37,17 @@ compile 'com.xyz.step:step:1.0.4'
 
     Attribute | Describe | Type | Default value | Whether must
       --- | --- | --- | --- | ---
-    h_bg_radius | Background circle radius | dimension | 5 | No
-    h_pro_radius | Has completed the radius of the circles | dimension | 2 | No 
-    h_bg_width | Background line width | dimension | 3 | No
-    h_bg_color | Background Color | color | #cdcbcc | No
-    h_pro_width | The width of the line has been completed | dimension | 2 | No
-    h_pro_color | The completed color | color | #029dd5 | No
-    h_text_padding | Text and distance of the circle | dimension | 10 | No
-    h_time_padding | Time and distance of the circle | dimension | 15 | No
-    h_max_step | Total steps | int | 5 | No
-    h_pro_step | Step has been completed | int | 1 | No
-    h_textsize | textsize | dimension | 10 | No
+      h_bg_radius | Background circle radius | dimension | 5 | No
+      h_pro_radius | Has completed the radius of the circles | dimension | 2 | No 
+      h_bg_width | Background line width | dimension | 3 | No
+      h_bg_color | Background Color | color | #cdcbcc | No
+      h_pro_width | The width of the line has been completed | dimension | 2 | No
+      h_pro_color | The completed color | color | #029dd5 | No
+      h_text_padding | Text and distance of the circle | dimension | 10 | No
+      h_time_padding | Time and distance of the circle | dimension | 15 | No
+      h_max_step | Total steps | int | 5 | No
+      h_pro_step | Step has been completed | int | 1 | No
+      h_textsize | textsize | dimension | 10 | No
 
 #### layout
 
