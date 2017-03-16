@@ -35,7 +35,7 @@ compile 'com.xyz.step:step:1.0.4'
 
 #### Attribute is introduced
 
-Attribute | Describe | Type | Default value | Whether must
+    Attribute | Describe | Type | Default value | Whether must
     --- | --- | --- | --- | ---
     h_bg_radius | Background circle radius | dimension | 5 | No
     h_pro_radius | Has completed the radius of the circles | dimension | 2 | No 
@@ -89,7 +89,7 @@ Attribute | Describe | Type | Default value | Whether must
 
 #### Attribute is introduced
 
-Attribute | Describe | Type | Default value | Whether must
+    Attribute | Describe | Type | Default value | Whether must
     --- | --- | --- | --- | ---
     v_bg_radius | Background circle radius | dimension | 5 | No
     v_pro_radius | Has completed the radius of the circle | dimension | 2 | No
