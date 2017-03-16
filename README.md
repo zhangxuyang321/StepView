@@ -35,19 +35,19 @@ compile 'com.xyz.step:step:1.0.4'
 
 #### Attribute is introduced
 
-    Attribute | Describe | Type | Default value | Whether must
-      --- | --- | --- | --- | ---
-      h_bg_radius | Background circle radius | dimension | 5 | No
-      h_pro_radius | Has completed the radius of the circles | dimension | 2 | No 
-      h_bg_width | Background line width | dimension | 3 | No
-      h_bg_color | Background Color | color | #cdcbcc | No
-      h_pro_width | The width of the line has been completed | dimension | 2 | No
-      h_pro_color | The completed color | color | #029dd5 | No
-      h_text_padding | Text and distance of the circle | dimension | 10 | No
-      h_time_padding | Time and distance of the circle | dimension | 15 | No
-      h_max_step | Total steps | int | 5 | No
-      h_pro_step | Step has been completed | int | 1 | No
-      h_textsize | textsize | dimension | 10 | No
+Attribute | Describe | Type | Default value | Whether must
+--- | --- | --- | --- | ---
+h_bg_radius | Background circle radius | dimension | 5 | No
+h_pro_radius | Has completed the radius of the circles | dimension | 2 | No 
+h_bg_width | Background line width | dimension | 3 | No
+h_bg_color | Background Color | color | #cdcbcc | No
+h_pro_width | The width of the line has been completed | dimension | 2 | No
+h_pro_color | The completed color | color | #029dd5 | No
+h_text_padding | Text and distance of the circle | dimension | 10 | No
+h_time_padding | Time and distance of the circle | dimension | 15 | No
+h_max_step | Total steps | int | 5 | No
+h_pro_step | Step has been completed | int | 1 | No
+h_textsize | textsize | dimension | 10 | No
 
 #### layout
 
@@ -89,23 +89,23 @@ compile 'com.xyz.step:step:1.0.4'
 
 #### Attribute is introduced
 
-    Attribute | Describe | Type | Default value | Whether must
-      --- | --- | --- | --- | ---
-    v_bg_radius | Background circle radius | dimension | 5 | No
-    v_pro_radius | Has completed the radius of the circle | dimension | 2 | No
-    v_bg_width | Background line width | dimension | 3 | No
-    v_bg_color | Background Color | color | #cdcbcc | No
-    v_pro_width | The width of the line has been completed | dimension | 2 | No
-    v_pro_color |  The completed color | color | #029dd5 | No
-    v_interval | interval | dimension | 80 | No
-    v_bgPositionX | In a horizontal position | dimension | 100 | No
-    v_textPaddingLeft | The distance of text and lines | dimension | 10 | No
-    v_timePaddingRight | The distance of time and lines | dimension | 15 | No
-    v_max_step | Total steps | int | 5 | No
-    v_pro_step | Step has been completed | int | 1 | No
-    v_textsize | Text size | dimension | 10 | No
-    v_textMoveTop | The text on the vertical distance | dimension | 5 | No
-    v_timeMoveTop | The time on the vertical distance | dimension | 4 | No
+Attribute | Describe | Type | Default value | Whether must
+--- | --- | --- | --- | ---
+v_bg_radius | Background circle radius | dimension | 5 | No
+v_pro_radius | Has completed the radius of the circle | dimension | 2 | No
+v_bg_width | Background line width | dimension | 3 | No
+v_bg_color | Background Color | color | #cdcbcc | No
+v_pro_width | The width of the line has been completed | dimension | 2 | No
+v_pro_color |  The completed color | color | #029dd5 | No
+v_interval | interval | dimension | 80 | No
+v_bgPositionX | In a horizontal position | dimension | 100 | No
+v_textPaddingLeft | The distance of text and lines | dimension | 10 | No
+v_timePaddingRight | The distance of time and lines | dimension | 15 | No
+v_max_step | Total steps | int | 5 | No
+v_pro_step | Step has been completed | int | 1 | No
+v_textsize | Text size | dimension | 10 | No
+v_textMoveTop | The text on the vertical distance | dimension | 5 | No
+v_timeMoveTop | The time on the vertical distance | dimension | 4 | No
 
 #### layout
 
